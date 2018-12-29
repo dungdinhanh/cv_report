@@ -1,0 +1,116 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% University/School Laboratory Report
+% LaTeX Template
+% Version 3.1 (25/3/14)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Linux and Unix Users Group at Virginia Tech Wiki 
+% (https://vtluug.org/wiki/Example_LaTeX_chem_lab_report)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{article}
+
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{lipsum}
+\usepackage[ruled,linesnumbered,resetcount,noend,noline]{algorithm2e}
+\usepackage{multicol}
+%\usepackage{algpseudocode}
+\usepackage{longtable}
+\usepackage{enumitem}
+%\usepackage{subfig}
+\usepackage{booktabs}
+\usepackage[table]{xcolor}
+\usepackage{pdflscape}
+\usepackage{longtable}
+\usepackage{multirow}
+%\usepackage{geometry}
+\usepackage{threeparttablex}
+\usepackage[backend=bibtex,maxnames=1]{biblatex}
+\usepackage{subcaption}
+%\usepackage[labelformat=parens,labelsep=quad,skip=3pt]{caption}
+\usepackage{caption}
+\captionsetup[subfigure]{subrefformat=simple,labelformat=simple}
+\usepackage{subfiles}
+\usepackage{graphicx}
+\usepackage{acronym}
+%\usepackage[compatibility=false]{caption}
+%\usepackage[font=small,labelfont=bf,tableposition=top]{caption}
+%\usepackage[caption=false]{subfig}
+%\usepackage{subcaption}
+%\usepackage[numbers]{natbib}
+%\usepackage{hyperref}
+\usepackage{breakurl}
+\usepackage{url}
+\usepackage[bookmarks=true]{hyperref}
+\usepackage{enumitem}
+
+
+
+
+\setlength\parindent{15pt} % Removes all indentation from paragraphs
+\renewcommand{\labelenumi}{\alph{enumi}.} % Make numbering in the enumerate environment by letter rather than number (e.g. section 6)
+
+\usepackage{printlen}
+
+\bibliography{report.bib}
+
+%\usepackage{times} % Uncomment to use the Times New Roman font
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\title{Food classification\\ Experiment over several Deep Neural Networks \\ CHEM 101} % Title
+
+\author{Dinh Anh Dung \textsc{20140774}\\ Bui Anh Vu \textsc{20145292} \\ Hoang Dinh Tuan \textsc{2014}} % Author name
+
+\date{\today} % Date for the report
+
+\begin{document}
+
+\maketitle % Insert the title, author and date
+
+\begin{center}
+\begin{tabular}{l r}
+Date Performed: & December 29, 2019 \\ % Date the experiment was performed
+%Partners: & James Smith \\ % Partner names
+%& Mary Smith \\
+Instructor: & PhD.Dinh Viet Sang % Instructor/supervisor
+\end{tabular}
+\end{center}
+
+% If you wish to include an abstract, uncomment the lines below
+ \begin{abstract}
+Food classification from image is quite an important field with various applications. Since food monitoring plays a leading role in health - related problems; moreover, e-commerce will require more improvement form this field in the future. Because of the wide diversity of types of food, image recognition of food items is generally very difficult. However, deep learning has been shown recently to be a very powerful image recognition technique, and Convolutional neural network (CNN) is a state-of-the-art approach to deep learning. In this subject area, there are many procedures used for food classification.  Hence, we make an evaluation that compares these common procedures using Deep learning. Specifically, these procedures, which use 3 types of common Convolutional neural network (CNN), are VGG Network, Residual Network, Squeeze and Excitation Network.
+ \end{abstract}
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
+\subfile{intro}
+\subfile{prob}
+\subfile{net}
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+\printbibliography
+%----------------------------------------------------------------------------------------
+
+
+\end{document}

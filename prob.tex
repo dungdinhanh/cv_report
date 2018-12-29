@@ -1,0 +1,12 @@
+\section{Problem Formulation}
+The problem of Image Classification goes like this: Given a set of images that are all labeled with a single category, we are asked to predict these categories for a novel set of test images and measure the accuracy of the predictions. There are a variety of challenges associated with this task, including viewpoint variation, scale variation, intra-class variation, image deformation, image occlusion, illumination conditions, background clutter etc.
+
+
+How might we go about writing an algorithm that can classify images into distinct categories? Computer Vision researchers have come up with a data-driven approach to solve this. Instead of trying to specify what every one of the image categories of interest look like directly in code, they provide the computer with many examples of each image class and then develop learning algorithms that look at these examples and learn about the visual appearance of each class. In other words, they first accumulate a training dataset of labelled images, then feed it to the computer in order for it to get familiar with the data.
+
+Given that fact, the complete image classification pipeline can be formalized as follows:
+\begin{itemize}
+	\item Our input is a training dataset that consists of $N$ images, each labelled with one of $K$ different classes.
+	\item Then, we use this training set to train a classifier to learn what every one of the classes looks like.
+	\item  In the end, we evaluate the quality of the classifier by asking it to predict labels for a new set of images that it has never seen before. We will then compare the true labels of these images to the ones predicted by the classifier.
+\end{itemize}
